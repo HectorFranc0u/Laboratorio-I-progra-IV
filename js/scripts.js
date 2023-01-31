@@ -39,16 +39,15 @@ window.addEventListener('DOMContentLoaded', event => {
 const NombreImput = document.querySelector('#InputNombre')
 const ApellidoImput = document.querySelector('#InputApellido')
 const BotonEnviar = document.querySelector('button#ButtonEnviar')
-const resultado = document.querySelector('#resultado')
 
 BotonEnviar.addEventListener('click', () => {
     if (NombreImput.value.length == 0 || ApellidoImput.value.length == 0){
         window.alert('No puede enviar un elemento vacio!')
     } else { 
-        window.open("Ventana.html", "ventana", "width=500,height=300,scrollbars=NO")
         res = NombreImput.value + ' ' + ApellidoImput.value
-        resultado.value = res
+        document.write(res + ' Bienvenido!')
         NombreImput.value = ''
         ApellidoImput.value = ''
+        
     }
 })
